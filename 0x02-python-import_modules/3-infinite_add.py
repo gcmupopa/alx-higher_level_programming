@@ -1,11 +1,14 @@
-import sys
-from decimal import Decimal
+#!/usr/bin/python3
 
-args = sys.argv[1:]
-number_args = len(args)
-summ = Decimal(0)
+if __name__ == '__main__':
+    import sys
+    from decimal import Decimal
 
-for index in range(number_args):
-    summ += Decimal(args[index])
+    args = sys.argv[1:]
+    number_args = len(args)
+    summ = Decimal(0)
 
-print("summ")
+    for index in range(number_args):
+        summ += Decimal(args[index])
+
+    print("{}".format(summ))
