@@ -5,7 +5,7 @@ import hidden_4
 
 if __name__ == '__main__':
 
-    if sys.version_info[:2] != (3,8):
+    if sys.version_info[:2] != (3, 8):
         sys.exit()
 
     nam = dir(hidden_4)
