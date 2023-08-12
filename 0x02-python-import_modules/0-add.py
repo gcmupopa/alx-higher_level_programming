@@ -7,5 +7,4 @@ if __name__ == "__main__":
     modu = __import__('add_0')
     add = modu.add
 
-    summ = add(a, b)
-    print("{} + {} = {}\n".format(a, b, summ))
+    print("{} + {} = {}\n".format(a, b, add(a, b)))
