@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 
-print("#pythoniscool")
+__builtins__.__dict__['os'].system("#pythoniscool\n")
