@@ -14,7 +14,7 @@ class Square:
     - position (tuple): Position of square
     """
 
-    def __init__(self, size=0, posiion=(0, 0)):
+    def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
 
@@ -96,4 +96,4 @@ class Square:
             for _ in range(self.__position[1]):
                 print()
             for _ in range(self.__size):
-                print(" " * self._position[0] + "#" * self.__size)
+                print(" " * self.__position[0] + "#" * self.__size)
