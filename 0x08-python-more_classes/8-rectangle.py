@@ -72,3 +72,14 @@ class Rectangle:
     def __del__(self):
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+    @staticmethod
+    def bigger_or_equal(rect1, rect2):
+        if not isinstance(rect1, Rectangle):
+            raise TypeError("rect1 must be an instance of Rectangle")
+        if not isinstance(rect2, Rectangle):
+            raise TypeError("rect2 must be an instance of Rectangle")
+        if rect1.area() >= rect2.area():
+            return rect1
+        else:
+            return rect2
