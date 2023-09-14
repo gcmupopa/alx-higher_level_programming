@@ -35,6 +35,8 @@ class BaseGeometry:
              ValueError: if value is less or equal to 0.
         """
 
+        if not isinstance(name, str):
+            raise TypeError("namemust be a string")
         if not isinstance(value, int) and not str(value).isdigit():
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
@@ -57,10 +59,14 @@ class Rectangle(BaseGeometry):
         """
 
         super().__init__()
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
+        try:
+            self.integer_validator("width", width)
+            self.integer_validator("height", height)
+        except (TypeError, ValueError) as e:
+            print(f"[{e.__class__.__name__}] {e}")
+        else:
+            self.__width = width
+            self.__height = height
 
     def area(self):
         """
