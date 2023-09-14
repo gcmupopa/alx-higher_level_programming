@@ -19,4 +19,8 @@ def from_json_string(my_str):
         object: The python object represented by json string
     """
 
-    return json.loads(my_str)
+    try:
+        return json.loads(my_str)
+    except ValueError:
+        erm = f"[ValueError] Invalid JSON string: {my_str}"
+        return erm

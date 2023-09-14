@@ -18,9 +18,8 @@ def to_json_string(my_obj):
     Returns:
         str: The json representation of the object
     """
-
     try:
-        return json.dumps(my_obj)
+        return json.dumps(my_obj, sort_keys=True)
     except TypeError:
         ermsg = f"[TypeError] {my_obj} is not JSON serializable"
         return ermsg
