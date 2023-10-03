@@ -1,3 +1,3 @@
 #!/usr/bin/env python
-def coy_list(l):
+def copy_list(l):
     return l[:]
