@@ -1,0 +1,29 @@
+This is '3-say_my_name' module
+=========================================================================================================
+This uses the 'say_my_name' function
+=========================================================================================================
+
+Importing the function from the module:
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Checking for module docstring:
+    >>> m = __import__("3-say_my_name").__doc__
+    >>> len(m) > 1
+    True
+
+Checking for function docstring:
+    >>> n = __import__("3-say_my_name").say_my_name.__doc__
+    >>> len(n) > 1
+    True
+
+Printing both strings:
+    >>> say_my_name("Gamuchirai", "Mupopa")
+    My name is Gamuchirai Mupopa
+
+Printing with 1 string:
+    >>> say_my_name("Gamuchirai")
+    My name is Gamuchirai
+
+Printing with no strings:
+    >>> say_my_name("")
+    My name is 

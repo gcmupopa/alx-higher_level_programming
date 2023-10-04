@@ -1,0 +1,66 @@
+This is '2-matrix_divided' module
+=========================================================================================================
+This uses the 'matrix_divided' function
+=========================================================================================================
+                                                                                                                                                                         
+Importing the function from the module:
+    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Checking for module docstring:
+    >>> m = __import__("2-matrix_divided").__doc__
+    >>> len(m) > 1
+    True
+
+Checking for function docstring:
+    >>> n = __import__("2-matrix_divided").matrix_divided.__doc__
+    >>> len(n) > 1
+    True
+
+Dividing all positive matrix with positive divisor:
+    >>> matrix = [[2, 4, 6], [8, 8, 8]]
+    >>> div = 2
+    >>> matrix_divided(matrix, div)
+    [[1.00, 2.00, 3.00], [4.00, 4.00, 4.00]]
+
+Dividing all positive matrix with negative divisor:
+    >>> matrix = [[2, 4, 6], [8, 8, 8]]
+    >>> div = -2
+    >>> matrix_divided(matrix, div)
+    [[-1.00, -2.00, -3.00], [-4.00, -4.00, -4.00]]
+
+Dividing all negative matrix with positive divisor:
+    >>> matrix = [[-2, -4, -6], [-8, -8, -8]]
+    >>> div = 2
+    >>> matrix_divided(matrix, div)
+    [[-1.00, -2.00, -3.00], [-4.00, -4.00, -4.00]]
+
+Dividing all negative matrix with negative divisor:
+    >>> matrix = [[-2, -4, -6], [-8, -8, -8]]
+    >>> div = -2
+    >>> matrix_divided(matrix, div)
+    [[1.00, 2.00, 3.00], [4.00, 4.00, 4.00]]
+
+Dividing mixed matrix with positive divisor:
+    >>> matrix = [[-2, 4, -6], [8, -8, 8]]
+    >>> div = 2
+    >>> matrix_divided(matrix, div)
+    [[-1.00, 2.00, -3.00], [4.00, -4.00, 4.00]]
+
+Dividing mixed matrix with negative divisor:
+    >>> matrix = [[-2, 4, 6], [-8, 8, 8]]
+    >>> div = -2
+    >>> matrix_divided(matrix, div)
+    [[1.00, -2.00, -3.00], [4.00, -4.00, -4.00]]
+
+Dividing all positive matrix with odd divisor:
+    >>> matrix = [[3, 3, 6], [12, 9, 15]]
+    >>> div = 3
+    >>> matrix_divided(matrix, div)
+    [[1.00, 1.00, 2.00], [4.00, 3.00, 5.00]]
+
+Dividing zero matrix with positive divisor:
+    >>> matrix = [[0, 0, 0], [0, 0, 0]]
+    >>> div = 2
+    >>> matrix_divided(matrix, div)
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+    
